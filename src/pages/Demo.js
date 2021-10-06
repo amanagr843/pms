@@ -35,7 +35,7 @@ function createData(name, calories, fat, carbs, protein) {
 
 
 
-export default function BasicTable() {
+export default function BasicTable({handleclick}) {
  const [btc,setbtc] = React.useState(0)
  const [bnb,setbnb] = React.useState(0)
  const [eth,seteth] = React.useState(0)
@@ -44,6 +44,7 @@ export default function BasicTable() {
  const [sol_per,setSOL_per] = React.useState(0)
  const [bnb_per,setBNB_per] = React.useState(0)
  const [sol,setsol] = React.useState(0)
+//  const [demo,setDemo]=React.useState(false)
  socket.onmessage = evt => {
     const g = JSON.parse(evt.data)
     for(let i=0;i<g.length;i++){
@@ -77,6 +78,7 @@ export default function BasicTable() {
       ];
   return (
       <>
+      {/* <button onClick={handleclick()}>View our services</button> */}
       <h1 style={{textAlign:"center"}}>Demo Portfolio </h1>
 
       <br/>

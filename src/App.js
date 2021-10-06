@@ -30,14 +30,35 @@ const responsive = {
   }
 };
 const App = () => {
+  const [demo,setDemo]=React.useState(false)
+
+  const handleclick = () =>{
+    setDemo(!demo)
+  }
   return (
 
+   <>
+    {demo ?
+      <Demo />
+    :<>
+    <button className="form-button" onClick={()=>{
+     handleclick()
+    }}>
+      Check out the demo
+    </button>
       <Carousel responsive={responsive}>
-      <Home />
-      <Home1/>
-      <Home2/>
-      </Carousel>
+        <Home />
+        <Home1/>
+        <Home2/>
+        </Carousel>
+      </>
+}
 
+  
+   </>
+
+    
+    
   );
 };
 
