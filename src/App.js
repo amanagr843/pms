@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Home1 from "./pages/Home1";
 import Home2 from "./pages/Home2";
+import Demo from './pages/Demo'
 import Carousel from 'react-multi-carousel';
 
 import 'react-multi-carousel/lib/styles.css';
